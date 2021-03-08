@@ -35,6 +35,8 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
             hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
 
+            txtPassword.hint = hint
+
             typedArray.recycle()
         }
 
@@ -51,8 +53,6 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
     protected override fun onFinishInflate() {
         super.onFinishInflate()
-
-        txtPassword.hint = hint
     }
 
     override fun onClick(view: View?) {
