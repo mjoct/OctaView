@@ -35,7 +35,7 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
             hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
 
-            txtPassword.hint = hint
+            txtPassword.hint = "sdfasdfdsfdsfsfsfsafsa"
 
             typedArray.recycle()
         }
