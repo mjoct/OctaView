@@ -8,16 +8,16 @@ import android.widget.RelativeLayout
 class TextBoxPlain: RelativeLayout {
 
     constructor(context: Context) : super(context) {
-        initializeViews(context)
+        initView(context)
     }
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        initializeViews(context)
+        initView(context)
     }
     constructor(context: Context, attrs: AttributeSet, defStyle:Int) : super(context, attrs, defStyle) {
-        initializeViews(context)
+        initView(context)
     }
 
-    private fun initializeViews(context: Context) {
+    private fun initView(context: Context) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.text_box_plain, this)
     }

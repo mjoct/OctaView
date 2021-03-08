@@ -2,7 +2,6 @@ package com.programm3r.octalibrary
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -11,22 +10,30 @@ import android.widget.RelativeLayout
 
 class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
+    private var hint: String = ""
+
     private lateinit var txtPassword:   EditText
     private lateinit var  btnShowText:  Button
     private lateinit var  btnClearText: Button
 
-
     constructor(context: Context) : super(context) {
-        initializeViews(context)
+        initView(context)
     }
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
-        initializeViews(context)
+        initView(context)
     }
     constructor(context: Context, attrs: AttributeSet, defStyle:Int) : super(context, attrs, defStyle) {
-        initializeViews(context)
+        initView(context)
     }
 
-    private fun initializeViews(context: Context) {
+    private fun initView(context: Context, attrs: AttributeSet? = null) {
+
+        if (attrs != null) {
+            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextBoxPassword)
+
+            hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
+        }
+
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.text_box_password, this)
 
@@ -36,6 +43,8 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
         btnShowText.setOnClickListener(this)
         btnClearText.setOnClickListener(this)
+
+        txtPassword.hint = hint
 
     }
 
