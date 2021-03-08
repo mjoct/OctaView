@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ============== -->
+    <!-- WIDTH & HEIGHT -->
+    <!-- ============== -->
+
+    <dimen name="textbox_height">42dp</dimen>
+
+    <!-- ==== -->
+    <!-- SIZE -->
+    <!-- ==== -->
+
+    <dimen name="font_size_header">17dp</dimen>
+
+    <dimen name="font_size_extra_large">20dp</dimen>
+    <dimen name="font_size_large">18dp</dimen>
+    <dimen name="font_size_normal">16dp</dimen>
+    <dimen name="font_size_small">14dp</dimen>
+    <dimen name="font_size_extra_small">12dp</dimen>
+
+
+</resources>
