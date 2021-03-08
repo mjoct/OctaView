@@ -47,12 +47,12 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
         btnShowText.setOnClickListener(this)
         btnClearText.setOnClickListener(this)
 
-        txtPassword.hint = hint
-
     }
 
     protected override fun onFinishInflate() {
         super.onFinishInflate()
+
+        txtPassword.hint = hint
     }
 
     override fun onClick(view: View?) {
