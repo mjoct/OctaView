@@ -30,6 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    // Kotlin New Binding Step #2/5 - Add Config in Gradle
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 dependencies {
