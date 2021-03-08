@@ -28,13 +28,16 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
     private fun initView(context: Context, attrs: AttributeSet? = null) {
 
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+
         if (attrs != null) {
             val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextBoxPassword)
 
             hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
+
+            typedArray.recycle()
         }
 
-        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.text_box_password, this)
 
         txtPassword = findViewById<EditText>(R.id.txtPassword)
