@@ -29,6 +29,14 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
     private fun initView(context: Context, attrs: AttributeSet? = null) {
 
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        inflater.inflate(R.layout.text_box_password, this)
+
+        txtPassword = findViewById<EditText>(R.id.txtPassword)
+        btnShowText = findViewById<Button>(R.id.btnShowText)
+        btnClearText = findViewById<Button>(R.id.btnClearText)
+
+        btnShowText.setOnClickListener(this)
+        btnClearText.setOnClickListener(this)
 
         if (attrs != null) {
             val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextBoxPassword)
@@ -39,15 +47,6 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
 
             typedArray.recycle()
         }
-
-        inflater.inflate(R.layout.text_box_password, this)
-
-        txtPassword = findViewById<EditText>(R.id.txtPassword)
-        btnShowText = findViewById<Button>(R.id.btnShowText)
-        btnClearText = findViewById<Button>(R.id.btnClearText)
-
-        btnShowText.setOnClickListener(this)
-        btnClearText.setOnClickListener(this)
 
     }
 
