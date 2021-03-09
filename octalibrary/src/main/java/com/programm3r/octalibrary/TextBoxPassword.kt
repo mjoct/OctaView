@@ -38,15 +38,13 @@ class TextBoxPassword: RelativeLayout, View.OnClickListener {
         btnShowText.setOnClickListener(this)
         btnClearText.setOnClickListener(this)
 
-        if (attrs != null) {
-            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextBoxPassword)
+        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextBoxPassword)
 
-            hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
+        hint = typedArray.getString(R.styleable.TextBoxPassword_hint).toString()
 
-            txtPassword.hint = "sdfasdfdsfdsfsfsfsafsa"
+        txtPassword.hint = "sdfasdfdsfdsfsfsfsafsa"
 
-            typedArray.recycle()
-        }
+        typedArray.recycle()
 
     }
 
