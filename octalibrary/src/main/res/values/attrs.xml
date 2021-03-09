@@ -2,7 +2,7 @@
 <resources>
 
     <declare-styleable name="TextBoxPassword">
-        <attr name="hint" format="reference"/>
+        <attr name="hint" format="string"/>
         <!--        <attr name="btn_shape_type" format="enum">-->
         <!--            <enum name="circle" value="0"/>-->
         <!--            <enum name="rectangle" value="1"/>-->
